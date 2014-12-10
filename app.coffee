@@ -1,5 +1,4 @@
 Coffee  = require 'coffee-script'
-Express = require 'express'
 
 # Boot
 module.exports = require('./config/boot')

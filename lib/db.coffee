@@ -16,12 +16,12 @@ module.exports = exports = (config, models_dir, cb) ->
   # Add any mongoose plugins here
   # ============================
   # Caching
-  cache_options =
-    max: 20
-    maxAge: 1000 * 30
-    debug: false
+  #cache_options =
+    #max: 20
+    #maxAge: 1000 * 30
+    #debug: false
 
-  require('mongoose-cache').install Mongoose, cache_options
+  #require('mongoose-cache').install Mongoose, cache_options
 
   # Establish connection to database
   # ================================

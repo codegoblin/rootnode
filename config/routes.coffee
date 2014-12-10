@@ -14,7 +14,7 @@ module.exports = exports = (app, cb) ->
   # Vars
   # ====
 
-  route_dir = app.get('root') + '/app/routes/'
+  route_dir = Path.resolve('./app/routes/') + '/'
 
   # Methods
   # =======

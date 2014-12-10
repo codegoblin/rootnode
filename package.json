@@ -1,7 +1,10 @@
 {
   "name": "rootnode",
   "version": "0.0.1",
+  "description": "Node.js/Express.js Web Application Boilerplate",
+  "homepage": "http://github.com/codegoblin/rootnode",
   "private": false,
+  "author": "Cody Johnston <cody@codegobl.in> (http://codegobl.in/)"
   "dependencies": {
     "async": "0.9.0",
     "coffee-script": "1.8.0",
