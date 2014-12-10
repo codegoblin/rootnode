@@ -1,38 +1,23 @@
 {
-  "name": "tuc_express_boilerplate",
+  "name": "rootnode",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "async": "latest",
-    "division": "latest",
-    "coffee-script": "1.6.x",
-    "colors": "*",
-    "config": "0.4.30", 
-    "connect-assets": "2.4.1",
-    "connect-flash": "0.1.1",
-    "connect-redis": "latest",
-    "express": "3.x",
-    "express-resource": "1.0.0",
-    "grunt": "~0.4.x",
-    "jade": "*",
-    "moment": "*",
-    "mongoose": "3.6.x",
-    "mongoose-cache": "*",
-    "mongoose-timestamp": "0.1.0",
-    "nib": "*",
-    "node-uuid": "1.4.0",
-    "passport": "0.1.17",
-    "passport-remember-me": "0.0.1",
-    "redis": "latest",
-    "request": "latest",
-    "s3": "latest",
-    "string": "*",
-    "stylus": "*",
-    "underscore": "*",
-    "validator": "*"
+    "async": "0.9.0",
+    "coffee-script": "1.8.0",
+    "nconf": "0.6.7",
+    "express": "4.10.4",
+    "jade": "1.8.1",
+    "moment": "2.8.4",
+    "mongoose": "3.8.20",
+    "passport": "0.2.1",
+    "redis": "0.12.1",
+    "request": "2.51.0",
+    "stylus": "0.49.3",
+    "lodash": "2.4.1"
   },
   "engines": {
     "node": "0.10.x",
-    "npm":  "1.3.x"
+    "npm":  "2.1.4"
   }
 }
