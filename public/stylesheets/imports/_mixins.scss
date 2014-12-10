@@ -1,0 +1,224 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+// SET UP YOUR VARIABLES IN THIS FILE
+
+// Colours
+// ------------------------------------------------------------
+
+// Define your main colour palette
+
+$aqua                 : #a4c8ca;
+$black                : #000000;
+$blue                 : #2087a8;
+$cobalt               : #166f8c;
+$cream                : #fcfcf0;
+$creamdark            : #dcdac1;
+$white                : #FFFFFF;  
+$gray                 : #444444;
+$lightgray            : #EBEBEB;
+$darkgray             : #2f2f2f;  
+$red                  : #ea3225;
+$turquoise            : #5c8f91;
+$turquoisedark        : #2c4849;
+$yellow               : #ffea00;
+$orange               : #af682a;
+
+
+// Alerts, errors and UI interface
+$alert                : red;
+$success              : green;
+
+
+
+
+// Functions for px to em conversions
+// ------------------------------------------------------------
+
+@function emify($target, $context) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+// Make px to ems using base-font-size 
+// echo as: font-size: em-font(#px);
+
+@function em-font($target, $context: $base-font-size) {
+   @return emify($target, $context);
+}
+
+
+// Make px to ems using base-line-height 
+// echo as: font-size: em-base(#px);
+
+@function em-base($target, $context: $base-line-height) {
+   @return emify($target, $context);
+}
+
+
+// ADD YOUR OWN MIXINS AND HELPERS HERE
+// DESCRIBE WHAT EACH DOES AND HOW TO USE THEM
+
+
+// List styles
+// -------------------------------------------------------
+
+// Mixins for list style types
+@mixin unordered {
+   list-style-position: outside; 
+   list-style-type: disc;
+}
+
+@mixin unordered-inside {
+   list-style-position: inside; 
+   list-style-type: disc;
+}
+
+@mixin ordered {
+  list-style-position: outside; 
+  list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+  list-style-position: inside; 
+  list-style-type: decimal;
+}
+
+@mixin nobullet {
+  list-style-type: none;
+}
+
+// ::Production Variables
+// ------------------------------------------------------------
+//$cdn: "../"
+//$cdn: "http://d168uyq29kkpfr.cloudfront.net/"
+//$v: "?=0"
+//$lang: ""
+
+
+// ::Font-Face pre-render
+// ------------------------------------------------------------
+@include font-face("SSSocial", font-files("../../fonts/symbolset/social/ss-social-circle.woff", "../../fonts/symbolset/social/ss-social-circle.svg", "../../fonts/symbolset/social/ss-social-circle.ttf", "../../fonts/symbolset/social/ss-social-circle.eot"));
+
+/* Entypo Symbol font */
+@font-face {
+    font-family: 'Entypo';
+    src: url('../../fonts/entypo/entypo.eot');
+    src: url('../../fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/entypo/entypo.woff') format('woff'),
+         url('../../fonts/entypo/entypo.ttf') format('truetype'),
+         url('../../fonts/entypo/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../../fonts/leaguegothic/leaguegothic-regular-webfont.eot');
+    src: url('../../fonts/leaguegothic/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/leaguegothic/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../../fonts/leaguegothic/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/leaguegothic/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Condensed */
+@font-face {
+    font-family: 'League Gothic Condensed';
+    src: url('../../fonts/leaguegothic/leaguegothic-condensed-regular-webfont.eot');
+    src: url('../../fonts/leaguegothic/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/leaguegothic/leaguegothic-condensed-regular-webfont.woff') format('woff'),
+         url('../../fonts/leaguegothic/leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/leaguegothic/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../../fonts/bebasneue/BebasNeue-webfont.eot');
+    src: url('../../fonts/bebasneue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/bebasneue/BebasNeue-webfont.woff') format('woff'),
+         url('../../fonts/bebasneue/BebasNeue-webfont.ttf') format('truetype'),
+         url('../../fonts/bebasneue/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$serif: Georgia, "Times New Roman", Times, serif;
+
+$sans-serif: "Helvetica", Arial, sans-serif;
+
+$social-stack: "SSSocial";
+$icon-stack: "Entypo";
+
+$bebas : 'BebasNeue', Helvetica, Arial, sans-serif;
+$league : 'League Gothic', Helvetica, Arial, sans-serif;
+$leaguecond : 'League Gothic Condensed', Helvetica, 'Arial Narrow', sans-serif;
+
+
+
+// Fonts size and line height defaults for our calculations
+
+$base-font-size           : 16px;         // Sets the browser default size. Shouldn't need to change this.
+$base-line-height         : 8px;          // Baseline grid. Set to a sensible, small size.
+$round-to-nearest-half-line     : false;          // Round the line height to the nearest half line height. Off by default 
+
+/* Mixins
+/* ------------------------------------------------------------ */
+
+@mixin fluid-ratio($large-size, $small-size) {
+  $width-large: nth($large-size, 1);
+  $width-small: nth($small-size, 1);
+  $height-large: nth($large-size, 2);
+  $height-small: nth($small-size, 2);
+  $slope: ($height-large - $height-small) / ($width-large - $width-small);
+  $height: $height-small - $width-small * $slope;
+  padding-top: $slope * 100%;
+  height: $height;
+  background-size: cover;
+  background-position: center;
+}
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// VIDEO FRAME BORDER
+
+@mixin frameborder {
+  background: $cream;
+  border: 3px solid rgba(220,218,193,.85);
+  @include border-radius(12px);
+  @include box-shadow(rgba(0,0,0,.65) 0px 2px 10px);
+}
+
+@mixin buttonstyle {
+  background: $cream;
+  border: 3px solid rgba(220,218,193,.85);
+  @include border-radius(12px);
+  @include box-shadow(rgba(0,0,0,.65) 0px 2px 10px);
+  font-family: $bebas;
+  font-size: 2.3em;
+  line-height: 1.15em;
+  letter-spacing: 2px;
+  margin: 0 auto 15px;
+  text-align: center;
+  text-transform: uppercase;
+  @include transition-property(background);
+  @include transition-duration(.25s);
+  &:hover {
+    background: #fefef7;
+    cursor: pointer;  }
+  a {
+    display: block;
+  }
+}
+

@@ -1,0 +1,13 @@
+//- Loaded at the end of the document
+include google_analytics
+script(src="/javascripts/lib/jquery-1.9.1.min.js")
+script(src="/javascripts/lib/bootstrap.min.js")
+#fb-root
+script.
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{fb_app_id}";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
