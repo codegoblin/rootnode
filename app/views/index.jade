@@ -3,7 +3,9 @@ include includes/credits
 html(lang="en")
   include includes/head
   body
-    TUC NODE BOILERPLATE BOOTED!
+    form
+      input(type='file', accept='video/*' capture='camera')
+      input(type='submit')
+    video(autoplay)
   include includes/footer
   include includes/scripts
-

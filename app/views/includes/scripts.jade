@@ -1,7 +1,17 @@
 //- Loaded at the end of the document
 include google_analytics
-script(src="/javascripts/lib/jquery-1.9.1.min.js")
-script(src="/javascripts/lib/bootstrap.min.js")
+//- script(src="/javascripts/lib/jquery-1.9.1.min.js")
+script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+
+script.
+  $(function() {
+    $('form').submit(function(e){
+      e.preventDefault();
+      $('video').attr('src', URL.createObjectURL($('input')[0].files[0]));
+    });
+  });
+
+
 #fb-root
 script.
   (function(d, s, id) {
